@@ -4,7 +4,12 @@
 }
 
 @media only screen and (max-width : 992px) {
+  .menu {
 
+    &__phone {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width : 768px) {
@@ -13,6 +18,14 @@
 
 @media only screen and (max-width : 480px) {
 
+}
+@media only screen and (max-width : 540px) {
+  .menu {
+
+    &__leftBlock {
+      display: none;
+    }
+  }
 }
 
 @media only screen and (max-width : 375px) {

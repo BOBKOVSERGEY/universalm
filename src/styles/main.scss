@@ -1,3 +1,16 @@
 @import "variables";
+@import "mixins";
+
+body {
+  font-family: $fontLight;
+  font-size: 18px;
+  background: #fff;
+}
+
+@import "topmenu";
+@import "slick";
+@import "slider";
+
+
 
 @import "mediaqueries";

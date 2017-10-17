@@ -71,7 +71,7 @@ gulp.task('sass', function () {
 // watch
 gulp.task('watch', function () {
   browserSync.init({
-    proxy: "universalm"
+    server: "./"
   });
   gulp.watch(path.sass.src, ['sass'])
   gulp.watch(['*.*', 'dist/css/*.css', 'dist/images/*.*', 'dist/js/*.*']).on('change', browserSync.reload);
