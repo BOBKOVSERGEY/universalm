@@ -8,5 +8,37 @@
     background: no-repeat 50%;
     outline: 0;
   }
+  &__item-bg {
+    height: 100%;
+    background: rgba(#000, .4)url(../images/mosk.png);
+  }
+  &__content-heading {
+    font-family: $fontBold;
+    margin-top: 230px;
+    font-size: 42px;
+    color: $white;
+  }
+  &__content-description {
+    font-size: 22px;
+    color: $white;
+    margin-top: 70px;
+  }
+  &__content-button {
+    margin-top: 105px;
+  }
+  &__content-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 45px;
+    border: 2px solid $tiffani;
+    color: $white;
+    transition: border .3s;
+    &:hover {
+      border: 2px solid darken($tiffani, 20%);
+    }
+    &:focus {
+      transform: translate(0, 2px);
+    }
+  }
 
 }

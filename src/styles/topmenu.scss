@@ -88,6 +88,7 @@
     }
     &:focus {
       text-decoration: none;
+      transform: translate(0, 2px);
     }
     &_tiffani {
       background-color: $tiffani;

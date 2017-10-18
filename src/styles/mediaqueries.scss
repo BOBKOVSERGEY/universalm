@@ -5,9 +5,13 @@
 
 @media only screen and (max-width : 992px) {
   .menu {
-
     &__phone {
       display: none;
+    }
+  }
+  .slider {
+    &__content-description {
+      padding: 0 60px;
     }
   }
 }
@@ -17,6 +21,21 @@
 }
 
 @media only screen and (max-width : 480px) {
+  .slider {
+    &__content-heading {
+      margin-top: 145px;
+      font-size: 20px;
+    }
+    &__content-description {
+      font-size: 18px;
+    }
+  }
+
+  .service-product {
+    &__heading {
+      font-size: 20px;
+    }
+  }
 
 }
 @media only screen and (max-width : 540px) {
