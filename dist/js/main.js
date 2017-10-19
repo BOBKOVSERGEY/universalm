@@ -58,4 +58,79 @@ $(function () {
     $('.js-slider').slick("slickNext");
   });
 
-})
+});
+
+ymaps.ready(init);
+var myMap,
+    myPlacemarkOne,
+    myPlacemarkTwo,
+    myPlacemarkThree,
+    myPlacemarkFour,
+    myPlacemarkFive,
+    myPlacemarkSix;
+
+function init(){
+  myMap = new ymaps.Map("map", {
+    center: [59.22556174, 39.88066250],
+    zoom: 4.4
+  });
+
+  myMap.behaviors.disable([
+    'scrollZoom',
+    //'drag'
+  ]);
+
+  myMap.controls.remove('searchControl');
+
+  myCollection = new ymaps.GeoObjectCollection({}, {
+    iconLayout: 'default#image',
+    iconImageHref: '/dist/images/placeholder-point.svg',
+    iconImageSize: [64, 64],
+    iconImageOffset: [-32, -67],
+  });
+
+  myPlacemarkOne = new ymaps.Placemark([56.78886213, 60.60339450], {
+    balloonContentHeader: 'Склад в Екатеринбурге',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>620908, г. Екатеринбург, п. Шувакиш, ул. Зеленая, д. 50-а',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Склад в Екатеринбурге'
+  });
+
+  myPlacemarkTwo = new ymaps.Placemark([55.75399400, 37.62209300], {
+    balloonContentHeader: 'Главный офис в Москве',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>г. Москва, ул. Дружинниковская, д. 15, офис 416',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Главный офис в Москве'
+  });
+
+  myPlacemarkThree = new ymaps.Placemark([64.58569845, 40.56009850], {
+    balloonContentHeader: 'Обособленное подразделение в Архангельске',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>163000, г. Архангельск, пр. Троицкий, д. 52',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Обособленное подразделение в Архангельске'
+  });
+
+  myPlacemarkFour = new ymaps.Placemark([56.39074864, 61.90680050], {
+    balloonContentHeader: 'Обособленное подразделение в Каменск-Уральском',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>623400, Свердловская обл., г. Каменск-Уральский, ул. Карла-Маркса, д. 43, комната 207',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Обособленное подразделение в Каменск-Уральском'
+  });
+
+  myPlacemarkFive = new ymaps.Placemark([48.83164723, 44.76705250], {
+    balloonContentHeader: 'Обособленное подразделение в городе Волжкский',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>404130, Волгоградская обл., г. Волжский, 7-ая Автодорога, 6Б, офис 217',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Обособленное подразделение в городе Волжкский'
+  });
+  myPlacemarkSix = new ymaps.Placemark([47.23916830, 38.88116500], {
+    balloonContentHeader: 'Обособленное подразделение в городе Таганрог',
+    balloonContentBody: 'Телефон: +7 (495) 664 38 15<br>347909, Ростовская обл., г. Таганрог, ул. Социалистическая, д.170',
+    balloonContentFooter: '"Управляющая компания Универсал М"',
+    hintContent: 'Обособленное подразделение в городе Таганрог'
+  });
+
+  myCollection.add(myPlacemarkOne).add(myPlacemarkTwo).add(myPlacemarkThree).add(myPlacemarkFour).add(myPlacemarkFive).add(myPlacemarkSix);
+
+  myMap.geoObjects.add(myCollection);
+}

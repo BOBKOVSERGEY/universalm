@@ -14,7 +14,7 @@
     position: relative;
     margin-top: -60px;
     z-index: 2;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
   }
   &__heading {
     font-family: $fontBold;
@@ -24,7 +24,7 @@
     margin-bottom: 50px;
   }
   &__item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     transition: box-shadow .3s;
     &:hover {
       box-shadow: 0 0 30px #000;
@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: center;
     font-family: $fontBold;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     background-color: $tiffani;
     height: 60px;

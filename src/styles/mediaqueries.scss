@@ -17,7 +17,14 @@
 }
 
 @media only screen and (max-width : 768px) {
-
+  .map {
+    &__contact-info-wrapper {
+      position: absolute;
+      z-index: 3;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
 }
 
 @media only screen and (max-width : 480px) {
@@ -34,6 +41,15 @@
   .service-product {
     &__heading {
       font-size: 20px;
+    }
+  }
+
+  .map {
+    &__contact-info-phone, &__contact-info-email, &__contact-info-site {
+      font-size: 14px;
+    }
+    &__contact-info-address {
+      font-size: 14px;
     }
   }
 

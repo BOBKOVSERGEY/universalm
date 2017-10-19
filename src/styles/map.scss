@@ -1,0 +1,84 @@
+.map {
+
+  &__skew {
+    transform: skewY(3deg);
+    background-color: $white;
+    margin-top: -70px;
+    height: 140px;
+    position: relative;
+    z-index: 2;
+  }
+  &__heading {
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    font-size: 42px;
+    text-align: center;
+    margin-top: -135px;
+    position: relative;
+    z-index: 2;
+  }
+  &__container-map {
+    height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+  &__contact-info-wrapper {
+    position: absolute;
+    z-index: 3;
+    margin-left: 10%;
+  }
+  &__contact-info {
+    min-width: 260px;
+    max-width: 400px;
+    width: 100%;
+    background: rgba($white, .8) url(../images/mosk.png);
+    padding: 100px 10px 100px 30px;
+    color: $tiffaniDarken;
+
+  }
+  &__contact-info-phone, &__contact-info-email, &__contact-info-site {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: $fontBold;
+  }
+  &__contact-info-phone{
+    display: flex;
+    align-items: center;
+    & span {
+      margin-right: 30px;
+      position: relative;
+    }
+  }
+  &__contact-info-email {
+    display: flex;
+    align-items: center;
+    & span {
+      margin-right: 30px;
+      position: relative;
+    }
+    & a {
+      color: $tiffaniDarken;
+    }
+  }
+  &__contact-info-site {
+    display: flex;
+    align-items: center;
+    & span {
+      margin-right: 30px;
+      position: relative;
+    }
+  }
+  &__contact-info-address {
+    font-family: $fontBold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    & span {
+      margin-right: 25px;
+      position: relative;
+      left: -4px;
+    }
+  }
+}
