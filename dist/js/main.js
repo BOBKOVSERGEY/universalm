@@ -58,6 +58,20 @@ $(function () {
     $('.js-slider').slick("slickNext");
   });
 
+  /*button to top*/
+
+    var backToTop = $('.footer__button-top');
+
+//smooth scroll to top
+  backToTop.on('click', function(event){
+    event.preventDefault();
+    $('body,html').animate({
+        scrollTop: 0 ,
+      }, 700
+    );
+  });
+  /*end button to top*/
+
 });
 
 ymaps.ready(init);
