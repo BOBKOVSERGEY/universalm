@@ -5,6 +5,7 @@ body {
   font-family: $fontLight;
   font-size: 18px;
   background: #fff;
+  color: $gray;
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -15,9 +16,11 @@ a:hover, a:focus {
 @import "topmenu";
 @import "slick";
 @import "slider";
+@import "content";
 @import "service";
 @import "map";
 @import "footer";
+@import "modal";
 
 
 

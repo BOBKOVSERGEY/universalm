@@ -31,9 +31,8 @@ $(function () {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 20) {
+    if (scroll >= 20 && $('.menu').is('.main-menu')) {
       $('.menu').addClass('menu_scroll');
-
     } else {
       $('.menu').removeClass('menu_scroll');
     }

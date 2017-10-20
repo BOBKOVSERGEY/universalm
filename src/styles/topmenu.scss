@@ -141,7 +141,7 @@
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 
     ul {
-      //font-family: 'RobotoLight', sans-serif;
+      font-family: $fontBold;
       font-size: 2.4rem;
       font-weight: 300;
       color: $white;
@@ -172,6 +172,9 @@
       }
     }
   }
+}
+.inner-menu {
+  background: rgba($tiffaniDarken, .9) url(../images/mosk.png);
 }
 
 // Menu - opened
