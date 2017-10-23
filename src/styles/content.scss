@@ -50,6 +50,7 @@
     font-family: $fontBold;
     color: $tiffaniDarken;
     margin: 30px 0;
+    text-align: center;
   }
   &__heading-advantages {
     text-align: center;
@@ -59,10 +60,11 @@
     text-transform: uppercase;
   }
   &__certificates {
-    margin: 50px 0;
+    margin-top: 50px;
     & img {
       max-width: 100%;
       box-shadow: 0 0 10px $tiffaniDarken;
+      margin-bottom: 30px;
     }
   }
   &__advantages {
@@ -133,6 +135,48 @@
   }
   &__stage-works-item-text {
     margin: 20px 0;
+  }
+  &__gallery-heading {
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    margin: 30px 0;
+    text-align: center;
+  }
+  &__gallery-slider {
+    margin-top: 30px;
+    & img {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &__gallery-slider-button {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  &__gallery-link {
+    position: relative;
+    display: block;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: url(../images/mosk.png);
+    }
+
+  }
+  &__gallery-play {
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/play.svg);
+    top: 50%;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    opacity: .7;
   }
 
 }
