@@ -169,13 +169,13 @@
   &__gallery-play {
     position: absolute;
     z-index: 3;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-image: url(../images/play.svg);
     top: 50%;
-    margin-top: -50px;
+    margin-top: -75px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -75px;
     opacity: .7;
   }
 
