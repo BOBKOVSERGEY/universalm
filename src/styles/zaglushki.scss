@@ -9,7 +9,7 @@
     }
   }
   & .nav-tabs>li.active>a, & .nav-tabs>li.active>a:focus, & .nav-tabs>li.active>a:hover {
-    color: $gray;
+    color: $tiffaniDarken;
     cursor: default;
     background-color: rgba(#fff, .0);
     border: 1px solid rgba(#fff, .0);
@@ -19,7 +19,7 @@
     border-color: rgba(#fff, .0);
   }
   & .nav-tabs>li>a {
-    color: $tiffaniDarken;
+    color: $gray;
     font-family: $fontBold;
     text-transform: uppercase;
 
@@ -37,6 +37,71 @@
     margin-bottom: 30px;
     & img {
       max-width: 100%;
+    }
+  }
+  &__content-img {
+    text-align: center;
+    margin-bottom: 30px;
+    & img {
+      max-width: 100%;
+    }
+  }
+  &__content-heading {
+    text-align: center;
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    margin: 30px 0;
+    text-transform: uppercase;
+  }
+  & .tab-content {
+    margin-top: 100px;
+  }
+  &__size-plug {
+    margin: 30px 0;
+    text-align: center;
+  }
+  &__size-plug-item {
+    display: inline-block;
+    border: 1px solid $tiffani;
+    padding: 3px 10px;
+    margin: 5px 2px;
+    min-width: 140px;
+    text-align: center;
+    color: $tiffani;
+    font-size: 24px;
+    &_active {
+      border: 1px solid $gray;
+      color: $gray;
+    }
+    &:focus {
+      border: 1px solid $gray;
+      color: $gray;
+    }
+    &:hover{
+      color: $gray;
+    }
+  }
+  &__button {
+    text-align: center;
+    margin: 30px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #1d929c;
+    color: #d3e2e7;
+    transition: background-color .3s;
+    &:hover, &:focus {
+      background-color: darken($tiffani, 20%);
+      color: $white;
+    }
+    &:focus {
+      text-decoration: none;
+      transform: translate(0, 2px);
     }
   }
 }
