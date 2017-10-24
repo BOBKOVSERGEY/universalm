@@ -1,0 +1,67 @@
+.contacts {
+  &__heading-phone {
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    margin: 30px 0;
+  }
+  &__heading-phone-wrapper {
+    margin: 30px 0;
+    text-align: center;
+  }
+  &__phone {
+    display: block;
+    margin: 30px;
+    font-family: $fontBold;
+    font-size: 22px;
+    cursor: pointer;
+    color: $tiffaniDarken;
+  }
+
+}
+.units {
+  margin: 30px 0;
+
+  &__item {
+    max-width: 270px;
+    min-height: 150px;
+    background: $tiffani url(../images/mosk.png);;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+  }
+  &__heading {
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    margin: 30px 0;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__item-heading {
+    //font-size: 13px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  &__item-img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+    background: url(../images/hexagon-contacts.svg) no-repeat;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      max-width: 100%;
+      width: 40px;
+    }
+  }
+  &__item-description {
+    width: 70%;
+    font-size: 13px;
+    color: $white;
+  }
+}
