@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 
   }
   &__heading {
@@ -63,5 +63,102 @@
     width: 70%;
     font-size: 13px;
     color: $white;
+  }
+}
+.contact-form {
+  margin: 50px 0;
+}
+.form {
+  &__wrapper-input {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  &__wrapper-textarea {
+    margin-bottom: 30px;
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    border: 2px solid $tiffani;
+    padding: 5px 20px;
+    background: $white;
+    box-shadow: inset 0 0 5px $tiffaniDarken;
+    transition: .5s;
+    &.error {
+      border: 2px solid #a94442;
+      box-shadow: inset 0 0 5px rgba($tiffaniDarken, .0);
+    }
+    &::-webkit-input-placeholder {
+      color: $gray;
+    }
+    &::-moz-placeholder {
+      color: $gray;
+    }
+    &:-ms-input-placeholder {
+      color: $gray;
+    }
+    &:placeholder-shown {
+      color: $gray;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px $tiffani;
+      transform: scale(1.02);
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 150px;
+    border: 2px solid $tiffani;
+    padding: 5px 20px;
+    background: $white;
+    box-shadow: inset 0 0 5px $tiffaniDarken;
+    transition: .5s;
+    &::-webkit-input-placeholder {
+      color: $gray;
+
+    }
+    &::-moz-placeholder {
+      color: $gray;
+
+    }
+    &:-ms-input-placeholder {
+      color: $gray;
+
+    }
+    &:placeholder-shown {
+      color: $gray;
+
+    }
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 5px $tiffani;
+      transform: scale(1.02);
+    }
+  }
+  &__wrapper-button {
+    text-align: center;
+  }
+  &__btn {
+    border: 0;
+    background-color: $tiffani;
+    color: $white;
+    padding: 14px 40px;
+    transition: all .3s;
+    //font-size: 16px;
+    &:hover {
+      background-color: $tiffaniDarken;
+    }
+    &:focus {
+      transform: translate(0, 2px);
+    }
+  }
+  & label {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-family: $fontLight;
+    font-size: 11px;
+    color: #a94442;;
   }
 }

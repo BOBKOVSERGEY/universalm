@@ -57,18 +57,23 @@
     margin-top: 100px;
   }
   &__size-plug {
-    margin: 30px 0;
+    //margin: 30px 0;
     text-align: center;
+    & >div:last-child {
+      border-bottom: 1px solid $tiffani;
+    }
   }
   &__size-plug-item {
-    display: inline-block;
-    border: 1px solid $tiffani;
+    //display: inline-block;
+    border-top: 1px solid $tiffani;
+    //border-left: 1px solid $tiffani;
+    border-right: 1px solid $tiffani;
     padding: 3px 10px;
-    margin: 5px 2px;
-    min-width: 140px;
     text-align: center;
     color: $tiffani;
     font-size: 24px;
+    min-width: 140px;
+    width: 100%;
     &_active {
       border: 1px solid $gray;
       color: $gray;
@@ -79,6 +84,15 @@
     }
     &:hover{
       color: $gray;
+    }
+
+  }
+  &__size-plug-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    & >div:first-child {
+      border-left: 1px solid $tiffani;
     }
   }
   &__button {
@@ -104,4 +118,5 @@
       transform: translate(0, 2px);
     }
   }
+
 }

@@ -108,6 +108,72 @@ $(function () {
     $('.js-gallery').slick("slickNext");
   });
 
+  /*modal*/
+  var modalVerticalCenterClass = ".modal";
+  function centerModals($element) {
+    var $modals;
+    if ($element.length) {
+      $modals = $element;
+    } else {
+      $modals = $(modalVerticalCenterClass + ':visible');
+    }
+    $modals.each( function(i) {
+      var $clone = $(this).clone().css('display', 'block').appendTo('body');
+      var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
+      top = top > 0 ? top : 0;
+      $clone.remove();
+      $(this).find('.modal-content').css("margin-top", top);
+    });
+  }
+  $(modalVerticalCenterClass).on('show.bs.modal', function(e) {
+    centerModals($(this));
+  });
+  $(window).on('resize', centerModals);
+
+  /*input mask*/
+  $(".modal-form__input_mask").inputmask("+7(999)999-99-99");
+
+
+  /*validate popup form*/
+  $('.modal-form__form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      phone: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      phone: {
+        required: "Введите Ваш телефон"
+      }
+    }
+  });
+
+  /*validate contacts form*/
+  $('.form').validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      contact: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя"
+      },
+      contact: {
+        required: "Введите Ваши контакты"
+      }
+    }
+  });
+
 });
 
 ymaps.ready(init);
@@ -134,7 +200,7 @@ function init(){
 
   myCollection = new ymaps.GeoObjectCollection({}, {
     iconLayout: 'default#image',
-    iconImageHref: '/dist/images/placeholder-point.svg',
+    iconImageHref: 'dist/images/placeholder-point.svg',
     iconImageSize: [64, 64],
     iconImageOffset: [-32, -67],
   });

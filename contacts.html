@@ -56,11 +56,11 @@
     </div>
     <nav>
       <ul id="menu">
-        <li><a class="link" href="#">Главная</a></li>
-        <li><a class="link" href="#">О компании</a></li>
-        <li><a class="link" href="#">Услуги</a></li>
-        <li><a class="link" href="#">Заглушки для труб</a></li>
-        <li><a class="link" href="#">Контакты</a></li>
+        <li><a class="link" href="/">Главная</a></li>
+        <li><a class="link" href="about.html">О компании</a></li>
+        <li><a class="link" href="services.html">Услуги</a></li>
+        <li><a class="link" href="zaglushki.html">Заглушки для труб</a></li>
+        <li><a class="link" href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
   </header>
@@ -131,27 +131,49 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="units__item">
-              <div class="units__item-img">
-                <img src="dist/images/vol-gerb.png" alt="">
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="units__item">
+                  <div class="units__item-img">
+                    <img src="dist/images/vol-gerb.png" alt="">
+                  </div>
+                  <div class="units__item-description">
+                    <div class="units__item-heading">ОП в городе Волжкский</div>
+                    <p>Волгоградская обл., г. Волжский, 7-ая Автодорога, 6Б, офис 217</p>
+                  </div>
+                </div>
               </div>
-              <div class="units__item-description">
-                <div class="units__item-heading">ОП в городе Волжкский</div>
-                <p>Волгоградская обл., г. Волжский, 7-ая Автодорога, 6Б, офис 217</p>
+              <div class="col-md-6">
+                <div class="units__item">
+                  <div class="units__item-img">
+                    <img src="dist/images/tr-gerb.png" alt="">
+                  </div>
+                  <div class="units__item-description">
+                    <div class="units__item-heading">ОП в городе Таганрог</div>
+                    <p>Ростовская обл., г. Таганрог, ул. Социалистическая, д.170</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="units__item">
-              <div class="units__item-img">
-                <img src="dist/images/tr-gerb.png" alt="">
-              </div>
-              <div class="units__item-description">
-                <div class="units__item-heading">ОП в городе Таганрог</div>
-                <p>Ростовская обл., г. Таганрог, ул. Социалистическая, д.170</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <form class="form" action="" method="post">
+              <fieldset>
+                <div class="form__wrapper-input"><input class="form__input" type="text" name="name" placeholder="Ваше имя"></div>
+                <div class="form__wrapper-input"><input class="form__input" type="text" name="contact" placeholder="Контакты для связи"></div>
+                <div class="form__wrapper-input"><input class="form__input" type="text" name="namecompany" placeholder="Название компнаии"></div>
+                <div class="form__wrapper-textarea"><textarea class="form__textarea" name="comment" placeholder="Комментарий"></textarea></div>
+                <div class="form__wrapper-button"><button class="form__btn" type="submit">Оставить заявку</button></div>
+              </fieldset>
+            </form>
+
           </div>
         </div>
       </div>
@@ -216,11 +238,12 @@
     </div>
     <a href="#"><div class="footer__button-top"><img src="dist/images/cd-top-arrow.svg" alt=""></div></a>
   </section>
-<script src="dist/js/jquery.min.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
-<script src="dist/js/slick.min.js"></script>
-<script src="dist/js/lity.min.js"></script>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="dist/js/slick.min.js"></script>
+  <script src="dist/js/jquery.inputmask.js"></script>
+  <script src="dist/js/jquery.validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="dist/js/main.js"></script>
+  <script src="dist/js/main.js"></script>
 </body>
 </html>

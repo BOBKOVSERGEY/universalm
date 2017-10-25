@@ -25,6 +25,24 @@
       margin-right: 5%;
     }
   }
+  .stubs {
+    &__size-plug-wrapper {
+      flex-direction: column;
+      & > div:last-child {
+        border-bottom: 1px solid #1d929c;
+      }
+      & > div:first-child {
+        border-left: 0px solid #1d929c;
+      }
+    }
+    &__size-plug > div:last-child {
+      border-bottom: 0px solid #1d929c;
+    }
+    &__size-plug-item {
+      border-left: 1px solid #1d929c;
+    }
+
+  }
 }
 
 @media only screen and (max-width : 480px) {

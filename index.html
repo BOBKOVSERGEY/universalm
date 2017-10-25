@@ -51,14 +51,14 @@
         <a href="tel:+74956643815" class="menu__phone">
           +7 (495) 664 38 15
         </a>
-        <a href="#" class="menu__btn menu__btn_tiffani">Оставить заявку</a>
+        <a href="#" class="menu__btn menu__btn_tiffani" data-toggle="modal" data-target="#myModal">Оставить заявку</a>
       </div>
     </div>
     <nav>
       <ul id="menu">
         <li><a class="link" href="/">Главная</a></li>
         <li><a class="link" href="about.html">О компании</a></li>
-        <li><a class="link" href="#">Услуги</a></li>
+        <li><a class="link" href="services.html">Услуги</a></li>
         <li><a class="link" href="zaglushki.html">Заглушки для труб</a></li>
         <li><a class="link" href="contacts.html">Контакты</a></li>
       </ul>
@@ -295,10 +295,38 @@
     </div>
     <a href="#"><div class="footer__button-top"><img src="dist/images/cd-top-arrow.svg" alt=""></div></a>
   </section>
-<script src="dist/js/jquery.min.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
-<script src="dist/js/slick.min.js"></script>
+  <!-- Modal -->
+  <div class="modal-form">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-form__heading">Укажите имя и телефон</h2>
+          <div class="modal-form__wrapper-form">
+            <form class="modal-form__form" action="" method="post">
+              <div class="modal-form__wrapper-input">
+                <input class="modal-form__input" type="text" name="name" placeholder="Имя">
+              </div>
+              <div class="modal-form__wrapper-input">
+                <input class="modal-form__input modal-form__input_mask" type="text" name="phone" placeholder="+7(___)___-__-__">
+              </div>
+              <div class="modal-form__wrapper-button">
+                <button class="modal-form__btn" type="submit">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="dist/js/slick.min.js"></script>
+  <script src="dist/js/jquery.inputmask.js"></script>
+  <script src="dist/js/jquery.validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-<script src="dist/js/main.js"></script>
+  <script src="dist/js/main.js"></script>
 </body>
 </html>
