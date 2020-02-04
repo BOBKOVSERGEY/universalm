@@ -1,0 +1,33 @@
+.commercial-offer {
+  background-color: #fff;
+  padding: 0 0 0px 0;
+
+  &__skew {
+    transform: skewY(-3deg);
+    background-color: $white;
+    margin-top: -70px;
+    height: 140px;
+    position: relative;
+    &-btm {
+      transform: skewY(3deg);
+      background-color: #fff;
+      margin-bottom: -70px;
+      height: 140px;
+      position: relative;
+      z-index: 3;
+    }
+  }
+  &__container {
+    position: relative;
+    margin-top: -60px;
+    z-index: 4;
+    padding: 180px 0 0 0;
+  }
+  &__heading {
+    font-family: $fontBold;
+    text-align: center;
+    font-size: 42px;
+    color: $tiffaniDarken;
+    margin-bottom: 50px;
+  }
+}

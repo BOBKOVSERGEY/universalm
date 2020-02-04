@@ -11,6 +11,13 @@
     margin-top: -70px;
     height: 140px;
     position: relative;
+    &-btm {
+        transform: skewY(3deg);
+        background-color: $white;
+        margin-top: -140px;
+        height: 140px;
+        position: relative;
+    }
   }
   &__container {
     position: relative;
