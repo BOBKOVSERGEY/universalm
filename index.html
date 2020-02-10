@@ -261,8 +261,17 @@
                     <div class="form__wrapper-input">
                       <input class="form__input" type="text" name="email" placeholder="Ваш email">
                     </div>
-                    <div class="form__wrapper-input">
-                      <input class="form__input" type="text" name="email" placeholder="Выберите услугу">
+                    <div class="form__wrapper-select">
+                      <select data-minimum-results-for-search="Infinity" name="service" class="select-filter"><!--Infinity-->
+                        <option value="Выберите услугу">Выберите услугу</option>
+                        <option value="Резка труб">Резка труб</option>
+                        <option value="Резка труб с фаской">Резка труб с фаской</option>
+                        <option value="Удаление забоя фаски">Удаление забоя фаски</option>
+                        <option value="Устранение повреждений наружнего покрытия">Устранение повреждений наружнего покрытия</option>
+                        <option value="Увязка труб">Увязка труб</option>
+                        <option value="Контроль на приемке грузов">Контроль на приемке грузов</option>
+                        <option value="Контроль качества производства">Контроль качества производства</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -370,6 +379,7 @@
   <script src="dist/js/slick.min.js"></script>
   <script src="dist/js/jquery.inputmask.js"></script>
   <script src="dist/js/jquery.validate.min.js"></script>
+  <script src="dist/js/lib.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="dist/js/main.js"></script>
 </body>
