@@ -377,7 +377,9 @@
   width: 4px;
   height: 0; }
 .select2-results__options::-webkit-scrollbar-thumb {
-  background: #cccccc; }
+  background: $tiffani;
+  height: 71px;
+}
 
 .select2-container--bootstrap .select2-selection--single {
   text-align: left;
