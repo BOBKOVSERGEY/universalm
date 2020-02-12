@@ -1,5 +1,5 @@
 .content {
-  padding: 70px 0 140px 0;
+  padding: 70px 0 50px 0;
   background-color: $white;
   &__heading {
     font-family: $fontBold;
@@ -7,6 +7,14 @@
     color: $tiffaniDarken;
     text-align: center;
     margin-top: 60px;
+  }
+  &__headingtwo {
+    font-family: $fontBold;
+    color: $tiffaniDarken;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 20px;
+    text-transform: uppercase;
   }
   &__breadcrumb-wrapper {
     text-align: center;
@@ -38,6 +46,27 @@
   &__text {
     margin-top: 10px;
     font-size: 20px;
+    & ul {
+      padding: 0;
+      margin: 16px 0 41px;
+      list-style: none
+    }
+
+    & ul li {
+      position: relative;
+      padding: 0 0 0 39px;
+      margin: 10px 0 0
+    }
+
+    & ul li:before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      background: #1d929c
+    }
   }
   &__about-img {
     text-align: center;

@@ -14,16 +14,16 @@
     &-btm {
         transform: skewY(3deg);
         background-color: $white;
-        margin-top: -140px;
-        height: 140px;
         position: relative;
+        height: 140px;
+        top: -70px;
     }
   }
   &__container {
     position: relative;
     margin-top: -60px;
     z-index: 2;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
   &__heading {
     font-family: $fontBold;

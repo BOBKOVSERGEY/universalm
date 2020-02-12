@@ -150,17 +150,44 @@ $(function () {
 
   /*input mask*/
   $(".modal-form__input_mask").inputmask("+7(999)999-99-99");
+  $(".form-main__input_mask").inputmask("+7(999)999-99-99");
 
 
   /*validate popup form*/
   $('.modal-form__form').validate({
+    submitHandler: function(form){
+      var form = document.forms.sendformpopup,
+        formData = new FormData(form),
+        xhr = new XMLHttpRequest();
+
+      xhr.open("POST", "/send-main-popup.php");
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if(xhr.status == 200) {
+            $("#formMain")[0].reset();
+            //$('.upload-text-reset').text('Прикрепить файл');
+            $(".modal-form__answer").html('<div class="form-main__form-tanks">Заявка успешно отправлена!<div>');
+            //$(".form-main__answer-button").text('Сообщение отправлено!');
+
+            //setTimeout(function () {
+            //setTimeout($(".form-main__answer-button").text(''), 3000);
+            //}, 3000);
+          } else {
+            $(".modal-form__answer").html('<div class="form-main__form-tanks">Что то пошло не так!<div>');
+          }
+        }
+      };
+      xhr.send(formData);
+    },
     rules: {
       name: {
         required: true,
       },
       phone: {
-        required: true,
+        required: true
       }
+
     },
     messages: {
       name: {
@@ -171,7 +198,50 @@ $(function () {
       }
     }
   });
+  $('.modal-form-partner__form').validate({
+    submitHandler: function(form){
+      var form = document.forms.sendFormPopupPartner,
+        formData = new FormData(form),
+        xhr = new XMLHttpRequest();
 
+      xhr.open("POST", "/send-main-partner.php");
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if(xhr.status == 200) {
+            $("#sendFormPopupPartner")[0].reset();
+            //$('.upload-text-reset').text('Прикрепить файл');
+            $(".modal-form-partner__answer").html('<div class="form-main__form-tanks">Заявка успешно отправлена!<div>');
+            //$(".form-main__answer-button").text('Сообщение отправлено!');
+
+            //setTimeout(function () {
+            //setTimeout($(".form-main__answer-button").text(''), 3000);
+            //}, 3000);
+          } else {
+            $(".modal-form-partner__answer").html('<div class="form-main__form-tanks">Что то пошло не так!<div>');
+          }
+        }
+      };
+      xhr.send(formData);
+    },
+    rules: {
+      name: {
+        required: true,
+      },
+      contacts: {
+        required: true
+      }
+
+    },
+    messages: {
+      name: {
+        required: "Введите Ваше имя или компанию"
+      },
+      contacts: {
+        required: "Введите Ваш email или телефон"
+      }
+    }
+  });
   /*validate contacts form*/
   $('.form').validate({
     rules: {
@@ -192,6 +262,60 @@ $(function () {
     }
   });
 
+});
+
+/*validate form-main__form*/
+$('.form-main').validate({
+  submitHandler: function(form){
+    var form = document.forms.formMain,
+      formData = new FormData(form),
+      xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "/send-main.php");
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        if(xhr.status == 200) {
+          $("#formMain")[0].reset();
+          //$('.upload-text-reset').text('Прикрепить файл');
+          $(".form-main__answer").html('<div class="form-main__form-tanks">Заявка успешно отправлена!<div>');
+          //$(".form-main__answer-button").text('Сообщение отправлено!');
+
+          //setTimeout(function () {
+          //setTimeout($(".form-main__answer-button").text(''), 3000);
+          //}, 3000);
+        } else {
+          $(".form-main__answer").html('<div class="form-main__form-tanks">Что то пошло не так!<div>');
+        }
+      }
+    };
+    xhr.send(formData);
+  },
+  rules: {
+    name: {
+      required: true,
+    },
+    email: {
+      required: true,
+      email: true
+    },
+    phone: {
+      required: true
+    }
+
+  },
+  messages: {
+    name: {
+      required: "Введите Ваше имя"
+    },
+    email: {
+      required: "Введите адрес электронной почты",
+      email: "Не корректный адрес"
+    },
+    phone: {
+      required: "Введите Ваш телефон"
+    }
+  }
 });
 
 ymaps.ready(init);
