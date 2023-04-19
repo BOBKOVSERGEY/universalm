@@ -19,7 +19,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-csso": "^3.0.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-sass": "^3.1.0",
